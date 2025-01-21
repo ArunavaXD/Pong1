@@ -20,7 +20,7 @@ function love.load()
     ballSpeedMulti = 1.1
 
     ballTrail = {}
-    maxTrailLength = 4
+    maxTrailLength = 7
 
     Point1 = 0
     Point2 = 0
@@ -148,8 +148,12 @@ function love.keypressed(key)
     if key == "m" then
         if gameMode == "vsAI" then
             gameMode = "vsPlayer"
+            Point1, Point2 = 0, 0
+            ballX, ballY = 400, 300
         else
             gameMode = "vsAI"
+            Point1, Point2 = 0, 0
+            ballX, ballY = 400, 300
         end
     end
 end
